@@ -61,9 +61,70 @@
 
 	<style>
 		#box {
-			width: 30%;
+			width: 20%;
 			height: 100%;
 			margin: 0 auto;
+		}
+		body {
+			font-family: 'Inter', sans-serif;
+			background-color: #f0f4f8;  
+			color: #333;
+		}
+		h3 {
+			margin-top: 40px;
+			font-size: 24px;
+			color: #222;
+		}
+		.container {
+			max-width: 900px;
+			margin: 0 auto;
+			padding: 0 20px;
+		}
+		details {
+			margin-bottom: 8px;
+			padding-left: 20px; /* 缩进所有内容 */
+		}
+		summary {
+			list-style: none; /* 去掉默认的 disclosure triangle */
+			cursor: pointer;
+			font-size: 18px;
+			font-weight: bold;
+			color: #333;
+			display: flex;
+			align-items: center;
+			gap: 8px; /* 箭头和文字之间的间距 */
+			padding: 6px 0;
+		}
+
+		summary::before {
+			content: "▸";  /* 非常精致的小三角 */
+			display: inline-block;
+			transition: transform 0.2s ease;
+			font-size: 14px;
+			color: #666;
+		}
+
+		details[open] summary::before {
+			transform: rotate(90deg);
+			content: "▾";  /* 下拉状态更自然的箭头 */
+		}
+
+		ul {
+			margin-top: 6px;
+			padding-left: 20px;
+		}
+
+		li {
+			margin-bottom: 6px;
+			font-size: 16px;
+		}
+
+		a {
+			color: #005ea8;
+			text-decoration: none;
+		}
+		a:hover {
+			text-decoration: underline;
 		}
 	</style>
 
@@ -129,7 +190,7 @@
 
 					<h2>
 						<div>
-							<img src="images/changxu_23.png" align=right style="width: 17%; height: 20%" />
+							<img src="images/changxu_23.png" align=right style="width: 15%; height: 18%" />
 						</div>
 						<p style="font-weight:bold;">Chang Xu</p>
 					</h2>
@@ -142,9 +203,9 @@
 					<p> Google Scholar:
 						<a href="https://scholar.google.com/citations?user=tP8H-hsAAAAJ&hl=zh-CN">Chang Xu</a>
 					</p>
-					<p> CV:
+					<!-- <p> CV:
 						<a href="images/ChangXu_CV_20241121.pdf">Chang Xu</a>
-					</p>
+					</p> -->
 					<br/>
 					<!-- <h3>About</h3> -->
 					<p>I'm currently a Phd student (2024-) of
@@ -155,65 +216,92 @@
 						who guided me onto the journey of scientific research and helped me harvest a bunch of research experience and outcomes on object detection and localization, especially the tiny object detection series.
 					<p>
 
-				<h3> Recent News </h3>
-				<p style="font-size:16px"><strong>2025</strong></p>
+			<h3>Recent News</h3>
+
+			<details open>
+			<summary style="font-size:16px"><strong>2025</strong></summary>
+			<ul>
 				<li style="font-size:16px">
-				    <strong>2025-05</strong> Our work on <a href="https://ieeexplore.ieee.org/document/10979499">Open World Event-based Object Detection</a> is accepted by <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=34">IEEE TPAMI</a>.
+				<strong>2025-06</strong> Our work on <a href="https://ieeexplore.ieee.org/document/10979499">Multi-Sensor Remote Sensing Foundation Model</a> is accepted by ICCV 2025, check the project page <a href="https://gsumbul.github.io/SMARTIES/">SMARTIES</a> for codes and models!
 				</li>
 				<li style="font-size:16px">
-				    <strong>2025-04</strong> Our paper on <a href="https://ieeexplore.ieee.org/document/10969845">Minimizing Sample Redundancy for Label-efficient Aerial Object Detection</a> is accepted by <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=36">IEEE Transactions on Geoscience and Remote Sensing</a>.
+				<strong>2025-05</strong> Our work on <a href="https://ieeexplore.ieee.org/document/10979499">Open World Event-based Object Detection</a> is accepted by IEEE TPAMI.
 				</li>
 				<li style="font-size:16px">
-				    <strong>2025-02</strong> Our paper on <a href="https://www.sciencedirect.com/science/article/pii/S0924271625000425?dgcid=author">Semi-supervised Small Object Detection</a> is accepted by <a href="https://www.sciencedirect.com/journal/isprs-journal-of-photogrammetry-and-remote-sensing">ISPRS Journal of Photogrammetry and Remote Sensing</a>.
-				</li>
-				<p style="font-size:16px"><strong>2024</strong></p>
-				<li style="font-size:16px">
-				    <strong>2024-07</strong> One collaborative paper on <a href="https://collebt.github.io/EM-CVGL/">Cross-view Geo-localization without Ground Truth</a> is accepted by TGRS 2024.</a>
+				<strong>2025-04</strong> Our paper on <a href="https://ieeexplore.ieee.org/document/10969845">Minimizing Sample Redundancy for Label-efficient Aerial Object Detection</a> is accepted by IEEE TGRS.
 				</li>
 				<li style="font-size:16px">
-				    <strong>2024-07</strong> The work on <a href="https://chasel-tsui.github.io/ConGeo/">Robust Cross-view Geo-localization</a> is accepted by ECCV 2024.</a>
+				<strong>2025-02</strong> Our paper on <a href="https://www.sciencedirect.com/science/article/pii/S0924271625000425?dgcid=author">Semi-supervised Small Object Detection</a> is accepted by ISPRS JPRS.
+				</li>
+			</ul>
+			</details>
+
+			<details>
+			<summary style="font-size:16px"><strong>2024</strong></summary>
+			<ul>
+				<li style="font-size:16px">
+				<strong>2024-07</strong> One collaborative paper on <a href="https://collebt.github.io/EM-CVGL/">Cross-view Geo-localization</a> is accepted by IEEE TGRS.
 				</li>
 				<li style="font-size:16px">
-				    <strong>2024-03</strong> Two works on <a href="https://www.sciencedirect.com/science/article/abs/pii/S0924271624000947">Aerial Object Tracking under Darkness and Occlusion</a> are accepted by IGARSS 2024.</a>
+				<strong>2024-07</strong> The work on <a href="https://chasel-tsui.github.io/ConGeo/">Robust Cross-view Geo-localization</a> is accepted by ECCV 2024.
 				</li>
 				<li style="font-size:16px">
-				    <strong>2024-03</strong> Our work on <a href="https://www.sciencedirect.com/science/article/abs/pii/S0924271624000947">Aerial Object Tracking with Similar Object Distraction</a> is accepted by <a href="https://www.sciencedirect.com/journal/isprs-journal-of-photogrammetry-and-remote-sensing">ISPRS Journal of Photogrammetry and Remote Sensing</a>.
-				</li>
-				<p style="font-size:16px"><strong>2023</strong></p>	
-				<li style="font-size:16px">
-					<strong>2023-11</strong> Our work on <a href="https://github.com/chnleixu/A3Track-Code">Aerial Object Tracking</a> is accepted by <a href="https://ieeexplore.ieee.org/xpl/aboutJournal.jsp?punumber=36">IEEE Transactions on Geoscience and Remote Sensing</a>.
+				<strong>2024-03</strong> Two works on <a href="https://www.sciencedirect.com/science/article/abs/pii/S0924271624000947">Aerial Object Tracking</a> are accepted by IGARSS 2024.
 				</li>
 				<li style="font-size:16px">
-					<strong>2023-08</strong> Our work on <a href="https://nnnnerd.github.io/RGBTDronePerson/">Drone-based RGBT Person Detection</a> is accepted by <a href="https://www.sciencedirect.com/journal/isprs-journal-of-photogrammetry-and-remote-sensing">ISPRS Journal of Photogrammetry and Remote Sensing</a>.
+				<strong>2024-03</strong> Our work on <a href="https://www.sciencedirect.com/science/article/abs/pii/S0924271624000947">Object Tracking with Distraction</a> is accepted by ISPRS JPRS.
 				</li>
-				<li style="font-size:16px">	
-					<strong>2023-05</strong> I got the best presentation award from ICDIP 2023.</a>
-				</li>			
+			</ul>
+			</details>
+
+			<details>
+			<summary style="font-size:16px"><strong>2023</strong></summary>
+			<ul>
 				<li style="font-size:16px">
-					<strong>2023-05</strong> I got the travel award from CVPR2023, unfortunately, my visa application to Canada was rejected :(</a>
-				</li>
-				<li style="font-size:16px">
-					<strong>2023-04</strong> I will go to EPFL, Switzerland for summer internship, I am looking forward to it very much!</a>
-				</li>
-				<li style="font-size:16px">
-					<strong>2023-04</strong> One collaborative work on Fast-moving Event-based Object Detection is accepted by <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=19">IEEE TIM</a>.
+				<strong>2023-11</strong> Our work on <a href="https://github.com/chnleixu/A3Track-Code">Aerial Object Tracking</a> is accepted by IEEE TGRS.
 				</li>
 				<li style="font-size:16px">
-					<strong>2023-03</strong> The work on Oriented Tiny Object Detection is accepted by <a href="https://cvpr2023.thecvf.com/">CVPR 2023</a>.
-				</li>
-				<p style="font-size:16px">
-					<strong>2022</strong>
-				</p>
-				<li style="font-size:16px">
-					<strong>2022-07</strong> The work on Generic Tiny Object Detection is accepted by <a href="https://www.ecva.net/papers/eccv_2022/papers_ECCV/html/3138_ECCV_2022_paper.php#">ECCV 2022</a>.
+				<strong>2023-08</strong> Our work on <a href="https://nnnnerd.github.io/RGBTDronePerson/">Drone-based RGBT Person Detection</a> is accepted by by ISPRS JPRS.
 				</li>
 				<li style="font-size:16px">
-					<strong>2022-06</strong> The work on <a href="https://www.sciencedirect.com/science/article/abs/pii/S0924271622001599?dgcid=author">Tiny Object Detection Dataset, Benchmark and Method</a> is accepted by <a href="https://www.sciencedirect.com/journal/isprs-journal-of-photogrammetry-and-remote-sensing">ISPRS Journal of Photogrammetry and Remote Sensing</a>.
+				<strong>2023-05</strong> I got the best presentation award from ICDIP 2023.
 				</li>
 				<li style="font-size:16px">
-					<strong>2021-04</strong> The work on <a href="https://openaccess.thecvf.com/content/CVPR2021W/EarthVision/html/Xu_Dot_Distance_for_Tiny_Object_Detection_in_Aerial_Images_CVPRW_2021_paper.html">Aerial Tiny Object Detection</a> is accepted by <a href="http://www.classic.grss-ieee.org/earthvision2021/">EarthVision 2021</a>.
+				<strong>2023-05</strong> I got the travel award from CVPR2023, but my visa was rejected.
 				</li>
-				</div>
+				<li style="font-size:16px">
+				<strong>2023-04</strong> I will go to EPFL for a summer internship!
+				</li>
+				<li style="font-size:16px">
+				<strong>2023-04</strong> One collaborative work on <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=19">Fast-moving Event-based Object Detection</a> is accepted by IEEE TIM.
+				</li>
+				<li style="font-size:16px">
+				<strong>2023-03</strong> The work on Oriented Tiny Object Detection is accepted by CVPR 2023.
+				</li>
+			</ul>
+			</details>
+
+			<details>
+			<summary style="font-size:16px"><strong>2022</strong></summary>
+			<ul>
+				<li style="font-size:16px">
+				<strong>2022-07</strong> The work on <a href="https://www.ecva.net/papers/eccv_2022/papers_ECCV/html/3138_ECCV_2022_paper.php#">Generic Tiny Object Detection </a> is accepted by ECCV 2022.
+				</li>
+				<li style="font-size:16px">
+				<strong>2022-06</strong> The work on <a href="https://www.sciencedirect.com/science/article/abs/pii/S0924271622001599?dgcid=author">Tiny Object Detection Dataset, Benchmark and Method</a> is accepted by ISPRS JPRS.
+				</li>
+			</ul>
+			</details>
+
+			<details>
+			<summary style="font-size:16px"><strong>2021</strong></summary>
+			<ul>
+				<li style="font-size:16px">
+				<strong>2021-04</strong> The work on <a href="https://openaccess.thecvf.com/content/CVPR2021W/EarthVision/html/Xu_Dot_Distance_for_Tiny_Object_Detection_in_Aerial_Images_CVPRW_2021_paper.html">Tiny Object Detection in Aerial Imagery</a> is accepted by <a href="http://www.classic.grss-ieee.org/earthvision2021/">EarthVision 2021 (CVPR)</a>.
+				</li>
+			</ul>
+			</details>
+
 
 				<div class="container">
 					<hr style="height:0px;border:none;border-top:1px solid #d9d9d9;" />
@@ -221,13 +309,13 @@
 					
 					<ul type="square">
 						<!--disc,circle,square-->
-						<li>Phd Candidate, 2024-
+						<li>Phd Student, 2024-
 							<br/> <strong>EPFL</strong>, Switzerland
 						</li>
 						<li>Exchange Master Student, 2023
 							<br/> <strong>EPFL</strong>, Switzerland
 						</li>
-						<li>M.Sc in Communication and Information System, 2021-2024
+						<li>M.Sc in Information and Communication Engineering, 2021-2024
 							<br/> <strong>Wuhan University</strong>, China
 						</li>
 
@@ -314,7 +402,7 @@
 								<p><b>Chang Xu</b>*, Jinwang Wang*, Wen Yang<sup>#</sup>, Huai Yu, Lei Yu, Gui-song Xia.</p>
 								<p>
 									<em>ISPRS Journal of Photogrammetry and Remote Sensing, 2022 </em>
-									<b style="color:red;">(Top-8 cited paper since 2022)</b>
+									<b style="color:red;">(Top-6 cited paper since 2022)</b>
 								<p>
 							</td>
 						</tr>
